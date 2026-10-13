@@ -1,5 +1,23 @@
 {
+  "version": 2,
   "month": "",
   "lineUrl": "",
+  "hidePast": true,
+  "venues": [
+    {
+      "id": "kawabun",
+      "name": "THE KAWABUN NAGOYA",
+      "type": "wedding",
+      "photo": "",
+      "photoAlt": ""
+    },
+    {
+      "id": "nanzan",
+      "name": "THE NANZAN HOUSE",
+      "type": "wedding",
+      "photo": "",
+      "photoAlt": ""
+    }
+  ],
   "lessons": []
 }
