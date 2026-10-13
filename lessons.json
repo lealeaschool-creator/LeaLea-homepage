@@ -1,7 +1,7 @@
 {
   "version": 2,
   "month": "2026年11月",
-  "lineUrl": "",
+  "lineUrl": "https://lin.ee/8SvAiSJ",
   "hidePast": true,
   "venues": [
     {
@@ -37,7 +37,7 @@
       "price": "単発 ¥3,500／3回コース ¥9,000（単発参加OK）",
       "age": "生後2ヶ月（1ヶ月検診後）〜1歳半頃",
       "items": "ご予約確定後にご案内",
-      "status": "詳細準備中",
+      "status": "受付中",
       "hidden": false
     },
     {
@@ -50,7 +50,7 @@
       "price": "単発 ¥3,500／3回コース ¥9,000（単発参加OK）",
       "age": "生後2ヶ月（1ヶ月検診後）〜1歳半頃",
       "items": "ご予約確定後にご案内",
-      "status": "詳細準備中",
+      "status": "受付中",
       "hidden": false
     },
     {
@@ -63,7 +63,7 @@
       "price": "単発 ¥3,500／3回コース ¥9,000（単発参加OK）",
       "age": "生後2ヶ月（1ヶ月検診後）〜1歳半頃",
       "items": "ご予約確定後にご案内",
-      "status": "詳細準備中",
+      "status": "受付中",
       "hidden": false
     }
   ]
