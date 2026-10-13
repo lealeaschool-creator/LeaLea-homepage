@@ -22,8 +22,8 @@
       "id": "motoyama-studio",
       "name": "STUDIO IPPO（名古屋市千種区朝岡町3丁目15）",
       "type": "studio",
-      "photo": "",
-      "photoAlt": ""
+      "photo": "assets/studio-ippo.jpg",
+      "photoAlt": "STUDIO IPPOの明るいグレーを基調としたスタジオ内観"
     }
   ],
   "lessons": [
