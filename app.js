@@ -6,7 +6,15 @@ function renderLessons(data) {
   window.renderLealeaLessons(data, list, message => setText('lesson-list-status', message));
 }
 renderLessons(window.LealeaLessons.defaults());
-fetch('lessons.json', { cache: 'no-cache' }).then(response => { if (!response.ok) throw new Error('読み込み失敗'); return response.json(); }).then(input => renderLessons(window.LealeaLessons.normalize(input))).catch(() => { setText('lesson-list-status', '開催情報を読み込めませんでした。詳細準備中です。時間をおいて再度ご確認ください。'); });
+if (window.location.protocol === 'file:' && window.LEALEA_LESSONS_INLINE) {
+  try { renderLessons(window.LealeaLessons.normalize(window.LEALEA_LESSONS_INLINE)); }
+  catch { setText('lesson-list-status', '開催情報の表示に失敗しました。'); }
+} else {
+  fetch('lessons.json', { cache: 'no-cache' }).then(response => { if (!response.ok) throw new Error('読み込み失敗'); return response.json(); }).then(input => renderLessons(window.LealeaLessons.normalize(input))).catch(() => {
+    if (window.LEALEA_LESSONS_INLINE) { try { renderLessons(window.LealeaLessons.normalize(window.LEALEA_LESSONS_INLINE)); return; } catch {} }
+    setText('lesson-list-status', '開催情報を読み込めませんでした。詳細準備中です。時間をおいて再度ご確認ください。');
+  });
+}
 content.faqs.forEach((faq, index) => {
   const details = document.createElement('details');
   const summary = document.createElement('summary');
