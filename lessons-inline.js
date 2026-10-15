@@ -30,8 +30,8 @@ window.LEALEA_LESSONS_INLINE = {
       "id": "oasis-terrace",
       "name": "OASIS TERRACE（岐阜県土岐市泉町大富269−7）",
       "type": "cafe",
-      "photo": "",
-      "photoAlt": ""
+      "photo": "assets/oasis-terrace.jpg",
+      "photoAlt": "OASIS TERRACEのALOHA・SURF・BEACHの飾り"
     }
   ],
   "lessons": [
