@@ -36,6 +36,32 @@ window.LEALEA_LESSONS_INLINE = {
   ],
   "lessons": [
     {
+        "id": "kawabun-instagram",
+        "title": "THE KAWABUN NAGOYA",
+        "type": "wedding",
+        "venueId": "kawabun",
+        "date": "",
+        "time": "",
+        "price": "",
+        "age": "",
+        "items": "",
+        "status": "詳細準備中",
+        "hidden": false
+    },
+    {
+        "id": "nanzan-instagram",
+        "title": "THE NANZAN HOUSE",
+        "type": "wedding",
+        "venueId": "nanzan",
+        "date": "",
+        "time": "",
+        "price": "",
+        "age": "",
+        "items": "",
+        "status": "詳細準備中",
+        "hidden": false
+    },
+    {
       "id": "motoyama-2026-11-13",
       "title": "本山ベビーマッサージレッスン（定員6組）",
       "type": "studio",
