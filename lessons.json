@@ -8,15 +8,15 @@
       "id": "kawabun",
       "name": "THE KAWABUN NAGOYA",
       "type": "wedding",
-      "photo": "",
-      "photoAlt": ""
+      "photo": "assets/kawabun-final.jpg",
+      "photoAlt": "THE KAWABUN NAGOYAのシャンデリアが美しい会場内観"
     },
     {
       "id": "nanzan",
       "name": "THE NANZAN HOUSE",
       "type": "wedding",
-      "photo": "",
-      "photoAlt": ""
+      "photo": "assets/nanzan-special.jpg",
+      "photoAlt": "THE NANZAN HOUSEの緑に囲まれた建物外観"
     },
     {
       "id": "motoyama-studio",
