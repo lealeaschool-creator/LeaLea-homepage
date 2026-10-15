@@ -9,15 +9,15 @@ window.LEALEA_LESSONS_INLINE = {
       "id": "kawabun",
       "name": "THE KAWABUN NAGOYA",
       "type": "wedding",
-      "photo": "",
-      "photoAlt": ""
+      "photo": "assets/kawabun-final.jpg",
+      "photoAlt": "THE KAWABUN NAGOYAの会場内観"
     },
     {
       "id": "nanzan",
       "name": "THE NANZAN HOUSE",
       "type": "wedding",
-      "photo": "",
-      "photoAlt": ""
+      "photo": "assets/nanzan-special.jpg",
+      "photoAlt": "THE NANZAN HOUSEの建物外観"
     },
     {
       "id": "motoyama-studio",
