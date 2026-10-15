@@ -19,16 +19,18 @@ window.renderLealeaLessons = (data, root, notice = () => {}) => {
     else { button.href = '#'; button.setAttribute('aria-disabled','true'); button.addEventListener('click', e => { e.preventDefault(); notice('このイベントの予約は現在受け付けていません。'); }); }
     body.append(dl,button); article.append(image,body); return article;
   }
-  for (const [type, label] of Object.entries(model.types)) {
+  for (const [type, originalLabel] of Object.entries(model.types)) {
+    if (type === 'cafe') continue;
+    const label = type === 'studio' ? 'スタジオ・カフェレッスン' : originalLabel;
     const section = document.createElement('section'); section.className = 'venue-group'; section.append(text('h3',label,'venue-title'));
-    const events = data.lessons.filter(e => e.type === type && model.visible(e,data)).sort((a,b) => (a.date || '9999').localeCompare(b.date || '9999'));
+    const events = data.lessons.filter(e => (type === 'studio' ? ['studio','cafe'].includes(e.type) : e.type === type) && model.visible(e,data)).sort((a,b) => (a.date || '9999').localeCompare(b.date || '9999'));
     const grid = document.createElement('div'); grid.className = 'lesson-list-grid';
     if (!events.length) { grid.append(card(null,null,type)); const venueNames = data.venues.filter(v => v.type === type && v.name).map(v => v.name); if (venueNames.length) section.append(text('p',`登録会場：${venueNames.join(' ／ ')}（開催情報は詳細準備中）`,'small-note')); }
     // 同じ会場・条件のスタジオレッスンは、開催日をまとめて1枚のカードに表示します。
     const displayed = [];
     const grouped = new Map();
     for (const event of events) {
-      if (type !== 'studio' || !event.venueId || !event.date) {
+      if (event.type !== 'studio' || !event.venueId || !event.date) {
         displayed.push(event);
         continue;
       }
@@ -47,8 +49,8 @@ window.renderLealeaLessons = (data, root, notice = () => {}) => {
       return `${month}月${day}日（${weekday}）`;
     };
     displayed.forEach(event => {
-      if (event.dates) event.displayDates = event.dates.map(formatDate).join(' ／ ');
-      grid.append(card(event,data.venues.find(v => v.id === event.venueId),type));
+      event.displayDates = event.dates ? event.dates.map(formatDate).join(' ／ ') : event.date ? formatDate(event.date) : '';
+      grid.append(card(event,data.venues.find(v => v.id === event.venueId),event.type));
     });
     section.append(grid); root.append(section);
   }
