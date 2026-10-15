@@ -1,7 +1,7 @@
 /* レッスン・日程は lessons.json を editor.html のフォームで編集してください。
    このファイルはSNS・よくある質問用です。 */
 window.LEALEA_CONTENT = {
-  social: { line: 'https://lin.ee/8SvAiSJ', instagram: null },
+  social: { line: 'https://lin.ee/8SvAiSJ', instagram: 'https://www.instagram.com/babymassage_lealea/' },
   faqs: [
     { question: 'ベビーマッサージがはじめてでも参加できますか？', answer: 'もちろんご参加いただけます！' },
     { question: '何か月から参加できますか？', answer: '生後2か月（1か月検診後）〜1歳半ごろまでご参加いただけます。' },
