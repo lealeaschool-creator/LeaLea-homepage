@@ -24,6 +24,13 @@
       "type": "studio",
       "photo": "assets/studio-ippo.jpg",
       "photoAlt": "STUDIO IPPOの明るいグレーを基調としたスタジオ内観"
+    },
+    {
+      "id": "oasis-terrace",
+      "name": "OASIS TERRACE（岐阜県土岐市泉町大富269−7）",
+      "type": "cafe",
+      "photo": "",
+      "photoAlt": ""
     }
   ],
   "lessons": [
@@ -64,6 +71,19 @@
       "age": "生後2ヶ月（1ヶ月検診後）〜1歳半頃",
       "items": "ご予約確定後にご案内",
       "status": "受付中",
+      "hidden": false
+    },
+    {
+      "id": "oasis-2026-11-18",
+      "title": "OASIS TERRACE 貸切カフェレッスン（初開催・限定5組）",
+      "type": "cafe",
+      "venueId": "oasis-terrace",
+      "date": "2026-11-18",
+      "time": "11:00〜13:00",
+      "price": "初開催限定 ¥2,000（別途ランチ代）",
+      "age": "",
+      "items": "ご予約確定後にご案内",
+      "status": "詳細準備中",
       "hidden": false
     }
   ]
