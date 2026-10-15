@@ -10,6 +10,13 @@ window.renderLealeaLessons = (data, root, notice = () => {}) => {
     image.addEventListener('error', () => { image.src = 'assets/lesson-placeholder.svg'; image.alt = '会場写真は詳細準備中'; }, { once: true });
     const body = document.createElement('div'); body.className = 'lesson-list-body';
     body.append(text('p', model.types[type], 'eyebrow'), text('h3', event?.title || model.types[type]));
+    if (type === 'wedding' && event) {
+      body.append(text('p', '開催日程・詳細はInstagramにてご確認ください。', 'availability'));
+      const button = text('a', 'Instagramで詳細を見る ↗', 'button button-dark full');
+      button.href = 'https://www.instagram.com/babymassage_lealea/';
+      button.target = '_blank'; button.rel = 'noopener noreferrer';
+      body.append(button); article.append(image,body); return article;
+    }
     const status = event?.status || pending; body.append(text('p', status, 'availability'));
     const dl = document.createElement('dl');
     for (const [label, value] of [['会場名',venue?.name],['開催日',event?.displayDates || event?.date || event?.legacyDatetime],['時間',event?.time],['対象月齢',event?.age],['参加費',event?.price],['持ち物',event?.items]]) { const row = document.createElement('div'); row.append(text('dt',label),text('dd',value || pending)); dl.append(row); }
